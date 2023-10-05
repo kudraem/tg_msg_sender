@@ -10,6 +10,8 @@ python = "^3.11"
 asyncio = "^3.4.3"
 python-telegram-bot = "^20.6"
 
+[tool.poetry.scripts]
+send-tg-msg = "tg_msg_sender.sender:main"
 
 [build-system]
 requires = ["poetry-core"]
