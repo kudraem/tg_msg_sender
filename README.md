@@ -3,7 +3,7 @@ Package to send telegram messages with attachements.
 
 # Usage
 ## import module
-```
+```python
 from tg_msg_sender.sender import send_msg
 import asyncio
 
