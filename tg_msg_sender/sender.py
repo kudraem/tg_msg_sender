@@ -34,7 +34,7 @@ async def send_msg(bot_token, chat_id, msg_body, attachement_urls=[]):
     async with bot:
         for url in attachement_urls:
             await bot.send_document(chat_id=chat_id, document=url)
-        await bot.send_message(chat_id=chat_id, text=msg_body)
+        await bot.send_message(chat_id=chat_id, text=msg_body, disable_web_page_preview=True)
 
 
 if __name__ == "__main__":
