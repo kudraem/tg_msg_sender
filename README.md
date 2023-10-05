@@ -23,5 +23,5 @@ send-tg-msg CHAT_ID 'Hello, my friend 🐍' BOT_TOKEN
 ```
 
 # Utilities
-To check last active telegram chat id, you can use 'tg-utility' command:
+To check last active telegram chat id, you can use `tg-utility` command:
 `tg-utility BOT_TOKEN`
