@@ -5,6 +5,7 @@ Package to send telegram messages with attachements.
 ## import module
 ```
 from tg_msg_sender.sender import send_msg
+import asyncio
 
 # text message
 bot_token = 'BOT_TOKEN'
@@ -12,7 +13,7 @@ chat_id = 'CHAT_ID'
 msg_text = 'Hello, my friend 🐍'
 
 try:
-    send_msg(bot_token, chat_id, msg_text)
+    asyncio.run(send_msg(bot_token, chat_id, msg_text))
 except Exception as e:
     print(f"An error has occurred: {e}")
 
@@ -20,7 +21,7 @@ except Exception as e:
 attachements = ['https://foo.com/bar.jpeg', 'https://bar.com/foo.mov']
 
 try:
-    send_msg(bot_token, chat_id, msg_text, attachements)
+    asyncio.run(send_msg(bot_token, chat_id, msg_text, attachements))
 except Exception as e:
     print(f"An error has occurred: {e}")
 ```
