@@ -7,6 +7,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+asyncio = "^3.4.3"
+python-telegram-bot = "^20.6"
 
 
 [build-system]
