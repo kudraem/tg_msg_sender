@@ -12,6 +12,7 @@ python-telegram-bot = "^20.6"
 
 [tool.poetry.scripts]
 send-tg-msg = "tg_msg_sender.sender:main"
+tg-utility = "tg_msg_sender.utilities:main"
 
 [build-system]
 requires = ["poetry-core"]
