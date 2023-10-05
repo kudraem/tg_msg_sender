@@ -10,11 +10,19 @@ from tg_msg_sender.sender import send_msg
 bot_token = 'BOT_TOKEN'
 chat_id = 'CHAT_ID'
 msg_text = 'Hello, my friend 🐍'
-send_msg(bot_token, chat_id, msg_text)
+
+try:
+    send_msg(bot_token, chat_id, msg_text)
+except Exception as e:
+    print(f"An error has occurred: {e}")
 
 ## text message with attachements
 attachements = ['https://foo.com/bar.jpeg', 'https://bar.com/foo.mov']
-send_msg(bot_token, chat_id, msg_text, attachements)
+
+try:
+    send_msg(bot_token, chat_id, msg_text, attachements)
+except Exception as e:
+    print(f"An error has occurred: {e}")
 ```
 
 ## cli command
