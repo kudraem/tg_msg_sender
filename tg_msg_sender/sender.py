@@ -38,13 +38,13 @@ async def send_msg(bot_token, chat_id, msg_body, attachement_urls=[]):
     async with bot:
         if attachement_count != 0:
             url = attachement_urls[0]
-            await bot.send_document(chat_id=chat_id, document=url, caption=msg_body, parse_mode='MarkdownV2')
+            await bot.send_document(chat_id=chat_id, document=url, caption=msg_body, parse_mode='HTML')
             
             for i in range(1, attachement_count):
                 url = attachement_urls[i]
                 await bot.send_document(chat_id=chat_id, document=url)
         else:
-            await bot.send_message(chat_id=chat_id, text=msg_body, disable_web_page_preview=True, parse_mode='MarkdownV2')
+            await bot.send_message(chat_id=chat_id, text=msg_body, disable_web_page_preview=True, parse_mode='HTML')
             
 
 if __name__ == "__main__":
